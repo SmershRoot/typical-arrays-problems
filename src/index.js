@@ -1,12 +1,21 @@
 
 exports.min = function min (array) {
-  return 0;
+  if(array==null || array.length==0){
+    return 0;
+  }
+  return array.reduce((a,b)=>(b < a ? a = b : {}, a));
 }
 
 exports.max = function max (array) {
-  return 0;
+  if(array==null || array.length==0){
+    return 0;
+  }
+  return array.reduce((a,b)=>(b > a ? a = b : {}, a));
 }
 
 exports.avg = function avg (array) {
-  return 0;
+  if(array==null || array.length==0){
+    return 0;
+  }
+  return (array.reduce((a,b)=>a+b))/array.length;
 }
